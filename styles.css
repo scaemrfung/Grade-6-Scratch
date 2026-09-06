@@ -1,15 +1,15 @@
 :root {
-  --bg: #e7f2ee;
-  --surface: #eef7f3;
-  --paper: #f6fbf8;
-  --fg: #12241d;
-  --muted: #3d5a50;
-  --subtle: #6a867b;
-  --primary: #0b6b56;
-  --primary-soft: #cde8de;
-  --line: #c4ddd3;
-  --hover-line: #a6cbbd;
-  --shadow: 0 1px 2px rgba(18, 36, 29, 0.05), 0 8px 24px rgba(18, 36, 29, 0.05);
+  --bg: #fff6e8;
+  --surface: #fff9f0;
+  --paper: #fffdf8;
+  --fg: #3b2410;
+  --muted: #7a5a3a;
+  --subtle: #a08060;
+  --primary: #d97706;
+  --primary-soft: #fde8c8;
+  --line: #edd9b8;
+  --hover-line: #e0c49a;
+  --shadow: 0 1px 2px rgba(59, 36, 16, 0.05), 0 8px 24px rgba(59, 36, 16, 0.05);
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
 }
@@ -100,7 +100,7 @@ button:not(:disabled) { cursor: pointer; }
   text-decoration: none;
   font-size: 14.5px;
 }
-.nav-link:hover { background: rgba(11, 107, 86, 0.07); text-decoration: none; }
+.nav-link:hover { background: rgba(217, 119, 6, 0.07); text-decoration: none; }
 .nav-link.active { background: var(--primary-soft); color: var(--primary); font-weight: 600; }
 .nav-ico { width: 18px; text-align: center; opacity: 0.85; }
 
@@ -108,7 +108,7 @@ button:not(:disabled) { cursor: pointer; }
   position: fixed;
   inset: 65px 0 0;
   z-index: 30;
-  background: rgba(231, 242, 238, 0.97);
+  background: rgba(255, 246, 232, 0.97);
   overflow: auto;
   padding: 16px;
 }
@@ -142,8 +142,8 @@ h3 { font-size: 22px; margin: 0 0 8px; }
   text-decoration: none;
 }
 .btn:hover { text-decoration: none; }
-.btn-primary { background: var(--primary); color: #f6fbf8; }
-.btn-primary:hover { background: #084d3e; }
+.btn-primary { background: var(--primary); color: #fffdf8; }
+.btn-primary:hover { background: #b45309; }
 .btn-ghost {
   background: #fff;
   color: var(--fg);
@@ -243,7 +243,7 @@ h3 { font-size: 22px; margin: 0 0 8px; }
   right: 12px;
   bottom: 12px;
   width: 132px;
-  background: rgba(246, 251, 248, 0.92);
+  background: rgba(255, 253, 248, 0.92);
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 6px;
@@ -278,7 +278,7 @@ h3 { font-size: 22px; margin: 0 0 8px; }
   text-decoration: none;
 }
 .lesson-row.bordered { border-top: 1px solid var(--line); }
-.lesson-row:hover { background: rgba(205, 232, 222, 0.45); text-decoration: none; }
+.lesson-row:hover { background: rgba(253, 232, 200, 0.55); text-decoration: none; }
 .row-top { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
 .row-top strong { font-family: var(--font-sans); font-size: 16px; }
 .mins { font-size: 12px; color: var(--subtle); }
@@ -316,7 +316,7 @@ h3 { font-size: 22px; margin: 0 0 8px; }
   color: inherit;
 }
 .step-card:hover, .check-card:hover { border-color: var(--hover-line); }
-.step-card.done, .check-card.done { background: rgba(205, 232, 222, 0.7); border-color: rgba(11, 107, 86, 0.28); }
+.step-card.done, .check-card.done { background: rgba(253, 232, 200, 0.75); border-color: rgba(217, 119, 6, 0.28); }
 .step-num {
   width: 32px;
   height: 32px;
@@ -330,7 +330,7 @@ h3 { font-size: 22px; margin: 0 0 8px; }
   flex-shrink: 0;
   font-variant-numeric: tabular-nums;
 }
-.step-num.stamped, .step-card.done .step-num { background: var(--primary); color: #f6fbf8; }
+.step-num.stamped, .step-card.done .step-num { background: var(--primary); color: #fffdf8; }
 .step-body { min-width: 0; flex: 1; }
 .step-body strong { display: block; }
 .step-body span { display: block; margin-top: 4px; color: var(--muted); font-size: 14px; line-height: 1.5; }
@@ -345,7 +345,7 @@ h3 { font-size: 22px; margin: 0 0 8px; }
   place-items: center;
   font-size: 12px;
   flex-shrink: 0;
-  color: #f6fbf8;
+  color: #fffdf8;
 }
 .check-card.done .check-box { background: var(--primary); border-color: var(--primary); }
 .check-card.done span:last-child { color: var(--muted); text-decoration: line-through; }
