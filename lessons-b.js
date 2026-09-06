@@ -150,7 +150,7 @@ const LESSONS_B = [
       "Click food or drink to trigger a reaction."
     ],
     teacher: [
-      "Cards in order. Introduce + Animate + Feed is a complete 30-minute pet. Hunger is the stretch.",
+      "Cards in order. Introduce + Animate + Feed is a complete one-hour pet. Hunger is the stretch.",
       "Pick a sprite with two costumes (Monkey, dragon, rabbit).",
       "Food and drink should be separate sprites."
     ],
