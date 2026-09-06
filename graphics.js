@@ -32,8 +32,10 @@ const LESSON_SCENE = {
 };
 
 function coverFigure(n, title) {
+  const scene = sceneSVG(LESSON_SCENE[n]);
   return `<figure class="lesson-cover">
-    <img src="${coverSrc(n)}" alt="${esc(title)} illustration" width="880" height="586"/>
-    <div class="scene-chip">${sceneSVG(LESSON_SCENE[n])}</div>
+    <div class="scene-cover">${scene}</div>
+    <img src="${coverSrc(n)}" alt="${esc(title)} illustration" width="880" height="586" onerror="this.remove()"/>
+    <div class="scene-chip">${scene}</div>
   </figure>`;
 }
