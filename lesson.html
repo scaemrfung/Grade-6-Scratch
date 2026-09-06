@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson · Grade 6 Tech</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;650;700&family=Newsreader:opsz,wght@6..72,500;6..72,560;6..72,650&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app"></div>
+  <script src="lessons-a1.js"></script>
+  <script src="lessons-a2.js"></script>
+  <script src="lessons-b.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    const n = Number(new URLSearchParams(location.search).get("n") || 0);
+    const lesson = LESSONS.find((l) => l.n === n) || LESSONS[0];
+    document.title = `Lesson ${lesson.n} · ${lesson.title}`;
+    const prev = LESSONS.find((l) => l.n === lesson.n - 1);
+    const next = LESSONS.find((l) => l.n === lesson.n + 1);
+    const p = lessonProgress(lesson.n);
+    document.getElementById("app").innerHTML = `
+      <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start;">
+        <div>
+          <p class="kicker" id="lesson-kicker">Lesson ${lesson.n} · ${lesson.minutes} minutes${p.stamped ? " · stamped" : ""}</p>
+          <h1>${esc(lesson.title)}</h1>
+          <p class="lead">Today you make: ${esc(lesson.project)}. ${esc(lesson.focus)}</p>
+        </div>
+        <div class="toolbar">
+          <button class="ghost-btn" onclick="window.print()">Print</button>
+        </div>
+      </div>
+      <div class="actions">
+        ${prev ? `<a class="btn btn-ghost" href="lesson.html?n=${prev.n}">← ${esc(prev.short)}</a>` : `<a class="btn btn-ghost" href="index.html">Course map</a>`}
+        ${next ? `<a class="btn btn-primary" href="lesson.html?n=${next.n}">${esc(next.short)} →</a>` : `<a class="btn btn-primary" href="final.html">Showcase →</a>`}
+        <button type="button" class="btn ${p.stamped ? "btn-primary" : "btn-ghost"}" data-stamp="${lesson.n}">${p.stamped ? "Stamped complete" : "Stamp complete"}</button>
+      </div>
+      <p class="count" id="step-count">${p.steps.length} of ${lesson.studentSteps.length} student steps checked</p>
+      ${lesson.cards ? `<p class="hint">Official Scratch cards: <a href="${esc(lesson.cards)}" target="_blank" rel="noopener">open the PDF</a></p>` : ""}
+      <div class="note teacher-only">
+        <h3>Teacher notes</h3>
+        <ul>${lesson.teacher.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
+      </div>
+      <div class="note">
+        <h3>Learning goals</h3>
+        <ul>${lesson.goals.map((g) => `<li>${esc(g)}</li>`).join("")}</ul>
+      </div>
+      ${(lesson.teacherSteps || []).length ? `
+      <div class="note teacher-only">
+        <h3>Teacher demo — click each step as you model it</h3>
+        <p class="hint">Project Scratch. Pause after every click so students can copy you.</p>
+        ${stepCards(lesson.n, "demo", lesson.teacherSteps)}
+      </div>` : ""}
+      <div class="note">
+        <h3 class="student-only">Your steps — tap each one as you finish</h3>
+        <h3 class="teacher-only">Student steps — project these</h3>
+        <p class="hint student-only">Do these in order. Tap a step when it is done so you can see where you left off.</p>
+        <p class="hint teacher-only">Walk the room with this list. Each line is one click or one short action in Scratch.</p>
+        ${stepCards(lesson.n, "steps", lesson.studentSteps)}
+      </div>
+      <div class="note">
+        <h3>Done when</h3>
+        <p class="hint">Check every box before you save.</p>
+        ${checkCards(lesson.n, lesson.checklist || [])}
+      </div>
+      <div class="note">
+        <h3>Watch out for</h3>
+        <ul>${(lesson.mistakes || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul>
+      </div>
+      <div class="note">
+        <h3>Challenge</h3>
+        <p>${esc(lesson.challenge)}</p>
+      </div>
+    `;
+  </script>
+</body>
+</html>
