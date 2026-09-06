@@ -158,6 +158,7 @@ function renderHomeExtras() {
     const week = firstOpenLesson();
     weekBox.innerHTML = `
       <div class="soft-kicker">This week’s lesson</div>
+      <div class="week-art"><img src="${thumbSrc(week.n)}" alt=""></div>
       <div class="week-meta">Lesson ${week.n} · ${week.minutes} minutes</div>
       <h3>${esc(week.title)}</h3>
       <p>${esc(week.focus)}</p>
@@ -179,6 +180,7 @@ function renderHomeExtras() {
     const p = store[String(l.n)] || blankProgress();
     const checked = (p.steps || []).length;
     return `<a class="lesson-row ${i ? "bordered" : ""}" href="lesson.html?n=${l.n}">
+      <img class="row-thumb" src="${thumbSrc(l.n)}" alt="">
       <span class="step-num ${p.stamped ? "stamped" : ""}">${p.stamped ? "\u2713" : pad(l.n)}</span>
       <span class="step-body">
         <span class="row-top"><strong>${esc(l.title)}</strong><span class="mins">${l.minutes} min</span></span>
