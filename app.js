@@ -158,10 +158,7 @@ function renderHomeExtras() {
     const week = firstOpenLesson();
     weekBox.innerHTML = `
       <div class="soft-kicker">This week’s lesson</div>
-      <div class="week-art">
-        <div class="scene-cover">${sceneSVG(LESSON_SCENE[week.n])}</div>
-        <img src="${thumbSrc(week.n)}" alt="" onerror="this.remove()">
-      </div>
+      <div class="week-art">${sceneSVG(LESSON_SCENE[week.n])}</div>
       <div class="week-meta">Lesson ${week.n} · ${week.minutes} minutes</div>
       <h3>${esc(week.title)}</h3>
       <p>${esc(week.focus)}</p>
@@ -176,9 +173,8 @@ function renderHomeExtras() {
     if (stampMeta) stampMeta.textContent = `${stampedCount()} of ${LESSONS.length} stamped`;
   }
 
-  document.querySelectorAll(".card-art").forEach((el) => {
-    const img = el.querySelector("img");
-    if (img) img.addEventListener("error", () => img.remove());
+  document.querySelectorAll("[data-scene]").forEach((el) => {
+    el.innerHTML = sceneSVG(el.dataset.scene);
   });
 
   const list = document.getElementById("lesson-list");
