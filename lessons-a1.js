@@ -61,7 +61,7 @@ const LESSONS_A1 = [
       "Try at least two different effects on different letters."
     ],
     teacher: [
-      "This pack can be done in any order. For 30 minutes, model Color Clicker and Spin. Let students add Sound or Size if time.",
+      "This pack can be done in any order. For a one-hour class, model Color Clicker and Spin. Let students add Sound or Size if time.",
       "Show Sprite Library \u2192 Letters category so they do not draw letters from scratch.",
       "Delete Scratch Cat so the Stage is only letters."
     ],
