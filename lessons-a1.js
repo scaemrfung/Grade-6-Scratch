@@ -4,7 +4,7 @@ const LESSONS_A1 = [
     short: "Scratch account",
     title: "Open Scratch and Learn the Editor",
     project: "Required first step",
-    minutes: 30,
+    minutes: 60,
     focus: "Create a Scratch account, name a blank project, and find the Stage, sprites, blocks, and green flag.",
     goals: [
       "Log in at scratch.mit.edu with a school-appropriate account.",
@@ -53,7 +53,7 @@ const LESSONS_A1 = [
     short: "Animate a Name",
     title: "Animate a Name",
     project: "Animated letters of your name",
-    minutes: 30,
+    minutes: 60,
     focus: "Use the official Animate a Name cards: click a letter to change color, spin, play a sound, and change size.",
     goals: [
       "Add letter sprites and a backdrop.",
@@ -101,7 +101,7 @@ const LESSONS_A1 = [
     short: "Animate a Character",
     title: "Animate a Character",
     project: "A character that moves and jumps",
-    minutes: 30,
+    minutes: 60,
     focus: "Move with arrow keys, jump with space, and switch costumes so the character looks alive.",
     goals: [
       "Change x and y with arrow keys.",
@@ -147,7 +147,7 @@ const LESSONS_A1 = [
     short: "Create a Story",
     title: "Create a Story",
     project: "A two-character scene with dialogue",
-    minutes: 30,
+    minutes: 60,
     focus: "Set a scene, make two characters talk in turns, and switch backdrops.",
     goals: [
       "Use say for seconds so lines do not overlap.",
