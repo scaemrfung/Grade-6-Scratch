@@ -4,7 +4,7 @@ const LESSONS_A2 = [
     short: "Make Music",
     title: "Make Music",
     project: "A keyboard instrument",
-    minutes: 30,
+    minutes: 60,
     focus: "Press keys to play drums, a rhythm, and a short melody using the Music sprites and sounds.",
     goals: [
       "Play a drum with the space key.",
@@ -50,7 +50,7 @@ const LESSONS_A2 = [
     short: "Make It Fly",
     title: "Make It Fly",
     project: "A flying character over moving scenery",
-    minutes: 30,
+    minutes: 60,
     focus: "Keep the hero still-ish while buildings or clouds scroll, then steer with arrow keys.",
     goals: [
       "Scroll a building by changing x in a forever loop.",
@@ -96,7 +96,7 @@ const LESSONS_A2 = [
     short: "Chase Game",
     title: "Chase Game",
     project: "Chase a star and keep score",
-    minutes: 30,
+    minutes: 60,
     focus: "Move a character with arrows, chase a gliding star, play a sound on touch, and add Score.",
     goals: [
       "Move with change x and change y.",
@@ -142,7 +142,7 @@ const LESSONS_A2 = [
     short: "Pong Game",
     title: "Pong Game",
     project: "A bouncing ball and paddle",
-    minutes: 30,
+    minutes: 60,
     focus: "Bounce a ball, control a paddle with the mouse, bounce off the paddle, and end the game on a miss.",
     goals: [
       "Use forever, move, and if on edge bounce.",

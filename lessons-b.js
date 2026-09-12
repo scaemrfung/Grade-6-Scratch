@@ -4,7 +4,7 @@ const LESSONS_B = [
     short: "Video Sensing",
     title: "Video Sensing",
     project: "A webcam interaction",
-    minutes: 30,
+    minutes: 60,
     focus: "Turn on the Video Sensing extension and make a sprite react when your hand moves.",
     goals: [
       "Add the Video Sensing extension.",
@@ -50,7 +50,7 @@ const LESSONS_B = [
     short: "Catch Game",
     title: "Catch Game",
     project: "Catch falling objects",
-    minutes: 30,
+    minutes: 60,
     focus: "A sprite starts at a random x at the top, falls, and is caught by a mover at the bottom.",
     goals: [
       "Set y to 180 and x to a random position.",
@@ -96,7 +96,7 @@ const LESSONS_B = [
     short: "Jumping Game",
     title: "Jumping Game",
     project: "Jump over a moving obstacle",
-    minutes: 30,
+    minutes: 60,
     focus: "Jump with space, reset to a start spot, and end the game if the hero hits a sliding obstacle.",
     goals: [
       "Build a jump with two repeats.",
@@ -142,7 +142,7 @@ const LESSONS_B = [
     short: "Virtual Pet",
     title: "Virtual Pet",
     project: "A pet that eats, drinks, and plays",
-    minutes: 30,
+    minutes: 60,
     focus: "Introduce a pet, animate costumes, and make it react to food, drink, and a toy.",
     goals: [
       "Place a pet and have it say hello.",
@@ -188,7 +188,7 @@ const LESSONS_B = [
     short: "Share & studio",
     title: "Share, Credit, and Join the Studio",
     project: "A published project in the class studio",
-    minutes: 30,
+    minutes: 60,
     focus: "Polish one project, write Instructions, Share, and add it to the class studio.",
     goals: [
       "Write Instructions a classmate can follow.",
